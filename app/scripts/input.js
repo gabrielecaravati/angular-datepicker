@@ -201,7 +201,8 @@ Module.directive('dateTime', ['$compile', '$document', '$filter', 'dateTimeConfi
         }
         // create picker element
         picker = $compile(template)(scope);
-        scope.$digest();
+        
+		//scope.$digest();
 
         //If the picker has already been shown before then we shouldn't be binding to events, as these events are already bound to in this scope.
         if (!shownOnce) {
