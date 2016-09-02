@@ -189,6 +189,9 @@ Module.directive('dateTime', ['$compile', '$document', '$filter', 'dateTimeConfi
                 format = attrs.format = data.format || dateTimeConfig.format;
                 ngModel.$modelValue = -1; //Triggers formatters. This value will be discarded.
               }
+			  if (angular.isDefined(data.timezone)) {
+                  attrs.timezone = data.timezone;
+              }
               getTemplate();
             }
           }
