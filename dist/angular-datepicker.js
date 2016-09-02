@@ -856,7 +856,7 @@ Module.directive('dateTime', ['$compile', '$document', '$filter', 'dateTimeConfi
               if (angular.isDefined(data.maxDate)) {
                 setMax(data.maxDate);
                 validateRequired = true;
-              }
+              }  
 
               if (angular.isDefined(data.minView)) {
                 attrs.minView = data.minView;
